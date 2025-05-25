@@ -46,8 +46,8 @@ func _input(event):
 	if event is InputEventMouseMotion:
 		print("Mouse Motion at: ", event.position)
 		
-		head_anchor.rotate_y((sign(event.velocity.x)) * -look_sensitivity)
-		camera_3d.rotate_x((sign(event.velocity.y)) * -look_sensitivity)
+		head_anchor.rotate_y((event.velocity.normalized().x) * -look_sensitivity)
+		camera_3d.rotate_x((event.velocity.normalized().y) * -look_sensitivity)
 		
 		if camera_3d.rotation_degrees.x < -90:
 			camera_3d.rotation_degrees.x = -90

@@ -10,7 +10,7 @@ height = 1.4048
 [node name="cat" type="CharacterBody3D"]
 script = ExtResource("2_se5fe")
 
-[node name="CharacterBody3D" type="Sprite3D" parent="."]
+[node name="Sprite3D" type="Sprite3D" parent="."]
 texture = ExtResource("1_myi5k")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

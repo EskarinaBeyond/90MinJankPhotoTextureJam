@@ -2,46 +2,27 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://d2e6vbh71hwx5"
-path="res://.godot/imported/t-door-1.png-90b834c488b71a45958662f55002e1c6.ctex"
-metadata={
-"vram_texture": false
-=======
-uid="uid://dbnvrn6ijygvw"
+uid="uid://ioklsieu56tw"
 path.s3tc="res://.godot/imported/t-door-1.png-90b834c488b71a45958662f55002e1c6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
->>>>>>> 319fc0e50ce20faf4b242d0669f7abc7908a1d9d
 }
 
 [deps]
 
 source_file="res://assets/textures/t-door-1.png"
-<<<<<<< HEAD
-dest_files=["res://.godot/imported/t-door-1.png-90b834c488b71a45958662f55002e1c6.ctex"]
-
-[params]
-
-compress/mode=0
-=======
 dest_files=["res://.godot/imported/t-door-1.png-90b834c488b71a45958662f55002e1c6.s3tc.ctex"]
 
 [params]
 
 compress/mode=2
->>>>>>> 319fc0e50ce20faf4b242d0669f7abc7908a1d9d
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-<<<<<<< HEAD
-mipmaps/generate=false
-=======
 mipmaps/generate=true
->>>>>>> 319fc0e50ce20faf4b242d0669f7abc7908a1d9d
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -51,8 +32,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-<<<<<<< HEAD
-detect_3d/compress_to=1
-=======
 detect_3d/compress_to=0
->>>>>>> 319fc0e50ce20faf4b242d0669f7abc7908a1d9d
