@@ -10,3 +10,5 @@
 [node name="Player" parent="Ingame" instance=ExtResource("1_uwrxv")]
 
 [node name="World" parent="Ingame" instance=ExtResource("2_yqjtg")]
+
+[node name="CatsAnchor" type="Node3D" parent="Ingame"]

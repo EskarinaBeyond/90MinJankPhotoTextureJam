@@ -1,4 +1,5 @@
 extends CharacterBody3D
+class_name Player
 
 
 @export var speed = 7.0
@@ -11,7 +12,7 @@ extends CharacterBody3D
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
-func _physics_process(delta: float) -> void:
+func _physics_process(delta: float) -> void:	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -37,6 +38,10 @@ func _physics_process(delta: float) -> void:
 	
 
 func _input(event):
+	
+	if event.is_action_pressed("ui_cancel"):
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	
 	# Mouse in viewport coordinates.
 	if event is InputEventMouseMotion:
 		print("Mouse Motion at: ", event.position)
