@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://ch3w2b78hvl0i"]
+
+[ext_resource type="Shader" uid="uid://e3q3yr8ubydm" path="res://assets/shaders/unlit.gdshader" id="1_sxth3"]
+[ext_resource type="Texture2D" uid="uid://dbnvrn6ijygvw" path="res://assets/textures/t-door-1.png" id="2_0ccpe"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0ccpe"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y7h0x"]
+render_priority = 0
+shader = ExtResource("1_sxth3")
+shader_parameter/custom_texture = ExtResource("2_0ccpe")
+
+[node name="Door" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 1, 0, 4.37114e-08, 1.91069e-15, 2, 1, 4.37114e-08, -8.74228e-08, 0, 2, 0)
+mesh = SubResource("PlaneMesh_0ccpe")
+surface_material_override/0 = SubResource("ShaderMaterial_y7h0x")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 7.64274e-15, 4.37114e-08, 1.91069e-15, 2, -1, 4.37114e-08, 8.74228e-08, 0, 2, 0)
+mesh = SubResource("PlaneMesh_0ccpe")
+surface_material_override/0 = SubResource("ShaderMaterial_y7h0x")
