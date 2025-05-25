@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjfblojhahyr"]
+[gd_scene load_steps=4 format=3 uid="uid://cjfblojhahyr"]
 
 [ext_resource type="PackedScene" uid="uid://g0ly1ky2cn6u" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://bpb6sy56xo06d" path="res://scenes/world.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://4wpq81flveb2" path="res://scenes/rooms/room-00.tscn" id="3_lnu2h"]
 
 [node name="GAME" type="Node"]
 
@@ -12,3 +13,5 @@
 [node name="World" parent="Ingame" instance=ExtResource("2_yqjtg")]
 
 [node name="CatsAnchor" type="Node3D" parent="Ingame"]
+[node name="room" parent="Ingame/World" instance=ExtResource("3_lnu2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -4, 0)

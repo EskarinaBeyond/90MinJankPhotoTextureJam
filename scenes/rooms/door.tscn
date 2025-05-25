@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://ch3w2b78hvl0i"]
+
+[ext_resource type="Shader" uid="uid://e3q3yr8ubydm" path="res://assets/shaders/unlit.gdshader" id="1_sxth3"]
+[ext_resource type="Script" uid="uid://dckocto0qmw42" path="res://scripts/door.gd" id="1_y7h0x"]
+[ext_resource type="Texture2D" uid="uid://dbnvrn6ijygvw" path="res://assets/textures/t-door-1.png" id="2_0ccpe"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0ccpe"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y7h0x"]
+render_priority = 0
+shader = ExtResource("1_sxth3")
+shader_parameter/custom_texture = ExtResource("2_0ccpe")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y7h0x"]
+size = Vector3(1, 3, 2)
+
+[node name="Door" type="Node3D"]
+script = ExtResource("1_y7h0x")
+
+[node name="pivot" type="Marker3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="pivot"]
+transform = Transform3D(-4.37114e-08, 1, 0, 4.37114e-08, 1.91069e-15, 2, 1, 4.37114e-08, -8.74228e-08, 0, 2, 1)
+mesh = SubResource("PlaneMesh_0ccpe")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ShaderMaterial_y7h0x")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="pivot"]
+transform = Transform3D(4.37114e-08, -1, -8.74228e-08, 0, -4.37114e-08, 2, 1, 4.37114e-08, 3.82137e-15, 0, 2, 1)
+mesh = SubResource("PlaneMesh_0ccpe")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ShaderMaterial_y7h0x")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.5)
+shape = SubResource("BoxShape3D_y7h0x")
