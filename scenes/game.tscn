@@ -1,11 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://cjfblojhahyr"]
+[gd_scene load_steps=3 format=3 uid="uid://cjfblojhahyr"]
 
 [ext_resource type="PackedScene" uid="uid://g0ly1ky2cn6u" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://bpb6sy56xo06d" path="res://scenes/world.tscn" id="2_yqjtg"]
 
 [node name="GAME" type="Node"]
 
 [node name="Ingame" type="Node3D" parent="."]
 
-[node name="World" type="Node3D" parent="Ingame"]
-
 [node name="Player" parent="Ingame" instance=ExtResource("1_uwrxv")]
+
+[node name="World" parent="Ingame" instance=ExtResource("2_yqjtg")]
